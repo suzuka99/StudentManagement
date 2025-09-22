@@ -1,0 +1,25 @@
+i# macOS
+.DS_Store
+
+# IDE (IntelliJ)
+.idea/
+*.iml
+
+# Gradle
+/.gradle
+/build/
+/out/
+
+# Gradle wrapper（jarはコミットするので ignore しない）
+
+# Java
+*.class
+
+# Logs / tmp
+*.log
+tmp/
+*.tmp
+
+# OS / Editor
+*.swp
+*~
