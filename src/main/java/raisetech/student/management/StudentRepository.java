@@ -11,12 +11,12 @@ import org.apache.ibatis.annotations.Update;
 public interface StudentRepository {
 
   @Select("SELECT * FROM student")
-  List<Student> serchByAll();
+  List<Student> searchByAll();
 
   @Select("SELECT * FROM student WHERE name = #{name}")
-  Student serchByName(String name);
+  Student searchByName(String name);
 
-  @Insert("INSERT student values(#{name}, #{age})")
+  @Insert("INSERT student (name, age) values(#{name}, #{age})")
   void registerStudent(String name, int age);
 
   @Update("UPDATE student SET name = #{name} WHERE age = #{age}")

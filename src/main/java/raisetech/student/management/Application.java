@@ -28,13 +28,13 @@ public class Application {
 	// 全件取得
 	@GetMapping("/studentAll")
 	public List<Student> getAllStudent() {
-		return repository.serchByAll();
+		return repository.searchByAll();
 	}
 
 	// 指定した名前の取得
 	@GetMapping("/student")
 	public String getStudent(@RequestParam String name) {
-		Student student = repository.serchByName(name);
+		Student student = repository.searchByName(name);
 		return student.getName() + " " + student.getAge() + "歳";
 	}
 
