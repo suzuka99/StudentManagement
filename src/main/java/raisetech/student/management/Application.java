@@ -1,4 +1,3 @@
-// 講義17課題：mapを引数として追加、複数のデータを追加、keyに紐付くデータを更新
 // GET POST
 // GETは取得する、リクエストの結果を受け取る
 // POSTは情報を与える、渡す
@@ -26,11 +25,11 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	/* // 全件取得
+	// 全件取得
 	@GetMapping("/studentAll")
 	public List<Student> getAllStudent() {
 		return repository.serchByAll();
-	} */
+	}
 
 	// 指定した名前の取得
 	@GetMapping("/student")
@@ -45,11 +44,11 @@ public class Application {
 		repository.registerStudent(name, age);
 	}
 
-	/* // 名前の変更
+	// 名前の変更
 	@PatchMapping("/studentName")
 	public void updateStudentName(String name, int age) {
 		repository.updateStudentName(name, age);
-	} */
+	}
 
 	// 年齢の変更
 	@PatchMapping("/studentAge")
